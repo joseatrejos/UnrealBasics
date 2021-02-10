@@ -12,8 +12,13 @@ class UNREALBASICS_API ARectanglePawn : public APawn
 	GENERATED_BODY()
 
 private:
-	UPROPERTY(EditAnywhere) float moveSpeed{ 100.0f };
+	UPROPERTY(EditAnywhere) float moveSpeed{ 100.f };
+
 	FVector* direction{ new FVector() };
+
+	void HorizontalAxis(float value);
+	void VerticalAxis(float value);
+
 
 public:
 	// Sets default values for this pawn's properties
